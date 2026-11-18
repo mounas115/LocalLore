@@ -54,11 +54,19 @@ class ItineraryView(APIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        attractions = Attraction.objects.filter(
-            location__icontains=destination
+        attractions = list(
+            Attraction.objects.filter(
+                location__icontains=destination
+            ).only(
+                "name",
+                "location",
+                "description",
+                "opening_time",
+                "closing_time"
+            ).order_by("id")[:15]
         )
 
-        if not attractions.exists():
+        if not attractions:
             return Response(
                 {"error": "No listed attractions found for this destination."},
                 status=status.HTTP_404_NOT_FOUND
