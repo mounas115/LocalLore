@@ -26,11 +26,8 @@ st.set_page_config(
 
 BACKEND_URL = os.getenv(
     "BACKEND_URL",
-    "http://127.0.0.1:8000"
+    "https://locallore.onrender.com"
 ).rstrip("/")
-
-API_BASE = f"{BACKEND_URL}/api"
-
 
 # --------------------------------------------------
 # API HELPER FUNCTIONS
