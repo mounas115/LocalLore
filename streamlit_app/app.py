@@ -28,6 +28,7 @@ BACKEND_URL = os.getenv(
     "BACKEND_URL",
     "https://locallore.onrender.com"
 ).rstrip("/")
+API_BASE = f"{BACKEND_URL}/api"
 
 # --------------------------------------------------
 # API HELPER FUNCTIONS
