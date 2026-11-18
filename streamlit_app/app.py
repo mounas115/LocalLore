@@ -39,7 +39,7 @@ def get_api_data(endpoint):
 
     response = requests.get(
         f"{API_BASE}/{endpoint}/",
-        timeout=30
+        timeout=120
     )
 
     response.raise_for_status()
