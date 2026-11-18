@@ -1,0 +1,7 @@
+Django==5.2.19
+djangorestframework==3.18.3
+google-genai==3.3.0
+python-dotenv==1.2.4
+gunicorn
+dj-database-url
+psycopg[binary]
