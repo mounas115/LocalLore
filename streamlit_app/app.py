@@ -606,6 +606,8 @@ elif menu == "Explore Map":
 
                             continue
 
+                        search_name = name
+                        
                         try:
 
                             # Respect Nominatim's public usage rate limit
